@@ -43,7 +43,7 @@ struct YoloV8Config {
     int numKPS = 17;
     float kpsThreshold = 0.5f;
     // Class thresholds (default are COCO classes)
-    std::vector<std::string> classNames = {
+    /* std::vector<std::string> classNames = {
         "person",         "bicycle",    "car",           "motorcycle",    "airplane",     "bus",           "train",
         "truck",          "boat",       "traffic light", "fire hydrant",  "stop sign",    "parking meter", "bench",
         "bird",           "cat",        "dog",           "horse",         "sheep",        "cow",           "elephant",
@@ -55,7 +55,9 @@ struct YoloV8Config {
         "chair",          "couch",      "potted plant",  "bed",           "dining table", "toilet",        "tv",
         "laptop",         "mouse",      "remote",        "keyboard",      "cell phone",   "microwave",     "oven",
         "toaster",        "sink",       "refrigerator",  "book",          "clock",        "vase",          "scissors",
-        "teddy bear",     "hair drier", "toothbrush"};
+        "teddy bear",     "hair drier", "toothbrush"}; */
+    std::vector<std::string> classNames = {
+        "license_plate",         "human_face"};
 };
 
 class YoloV8 {

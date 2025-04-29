@@ -112,6 +112,7 @@ std::vector<Object> YoloV8::detectObjects(const cv::cuda::GpuMat &inputImageBGR)
 
         const auto &outputDims = m_trtEngine->getOutputDims();
         size_t numChannels = outputDims[outputDims.size() - 1].d[1];
+        // std::cout << "Num channels: " << numChannels << std::endl;
         if (numChannels == 4 + CLASS_NAMES.size() + NUM_KPS * 3) {
             // Pose estimation
             ret = postprocessPose(featureVector);
